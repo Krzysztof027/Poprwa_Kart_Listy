@@ -6,14 +6,22 @@
         xmlns:local="clr-namespace:kart_Listy"
         mc:Ignorable="d"
         Title="Zapisdopliku" Height="450" Width="800">
-    <StackPanel>
-        <Menu>
-            <MenuItem Header="Plik"></MenuItem>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Plik">
+                <MenuItem  Header="Zapis do pliku" Click="Zapis_do_pliku"/>
+                <MenuItem Header="Otwórz plik" Click="Otworz_plik" ></MenuItem>
+            </MenuItem>
             <MenuItem Header="Okno">
-            <MenuItem Header="Zamknij" Click="Click_Zamknij"></MenuItem>
-            <MenuItem Header="Nowe okno modalne " Click="Click_Nowe_Modalne"/>
-            <MenuItem Header="Nowe okno niemodalne" Click="Click_Nowe_Niemodalne"/>
+                    <MenuItem Header="Zamknij" Click="Click_Zamknij">
+
+                    </MenuItem>
+                <MenuItem Header="Nowe okno modalne " Click="Click_Nowe_Modalne"/>
+                <MenuItem Header="Nowe okno niemodalne" Click="Click_Nowe_Niemodalne"/>
             </MenuItem>
         </Menu>
-    </StackPanel>
+        <TextBlock DockPanel.Dock="Top">Podaj tekst poniżej</TextBlock>
+        <TextBox x:Name="tekstDoZapisu" TextWrapping="Wrap" AcceptsReturn="True"></TextBox><!--Zapis do pliku-->
+    </DockPanel>
+    <!--TextWrapping-Można wpisywać komentarze wieloliniowe-->
 </Window>

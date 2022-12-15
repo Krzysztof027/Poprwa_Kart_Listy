@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +51,31 @@ namespace kart_Listy
             var okno = new Window_Nowe();
             okno.ShowDialog();
         }
+
+        private void Zapis_do_pliku(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog oknoZapisu = new SaveFileDialog();
+            oknoZapisu.Filter = "PlainText | *.txt";
+            oknoZapisu.Title = "zapisywanie";
+
+            if(oknoZapisu.ShowDialog() == true)
+            {
+                File.WriteAllText(oknoZapisu.FileName, tekstDoZapisu.Text);
+            }
+        }
+
+        private void Otworz_plik(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog otwieranyPlik = new OpenFileDialog();
+            otwieranyPlik.Filter = "PlainText | *.txt"; //Rozszerzenia
+            otwieranyPlik.Title = "Otwieranie pliku"; // 
+            if(otwieranyPlik.ShowDialog() == true)
+            {
+                tekstDoZapisu.Text = File.ReadAllText(otwieranyPlik.FileName);//Otwiera nowe okno w pliku
+            }
+        }
+
+        
         //Błyskawica-->We właściwościach (wywyołujemy tak tą metodę) 
     }
 }
