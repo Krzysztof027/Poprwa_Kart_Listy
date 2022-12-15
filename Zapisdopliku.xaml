@@ -9,8 +9,11 @@
     <StackPanel>
         <Menu>
             <MenuItem Header="Plik"></MenuItem>
-            <MenuItem Header="Okno"></MenuItem>
-            <MenuItem Header="Zamknij"></MenuItem>
+            <MenuItem Header="Okno">
+            <MenuItem Header="Zamknij" Click="Click_Zamknij"></MenuItem>
+            <MenuItem Header="Nowe okno modalne " Click="Click_Nowe_Modalne"/>
+            <MenuItem Header="Nowe okno niemodalne" Click="Click_Nowe_Niemodalne"/>
+            </MenuItem>
         </Menu>
     </StackPanel>
 </Window>

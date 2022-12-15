@@ -42,3 +42,5 @@ C:\Users\programista\Desktop\KS\kartkowka_1512\kart_Listy\obj\Debug\net6.0-windo
 C:\Users\programista\Desktop\KS\kartkowka_1512\kart_Listy\obj\Debug\net6.0-windows\ref\kart_Listy.dll
 C:\Users\programista\Desktop\KS\kartkowka_1512\kart_Listy\obj\Debug\net6.0-windows\Zapisdopliku.g.cs
 C:\Users\programista\Desktop\KS\kartkowka_1512\kart_Listy\obj\Debug\net6.0-windows\Zapisdopliku.baml
+C:\Users\programista\Desktop\KS\kartkowka_1512\kart_Listy\obj\Debug\net6.0-windows\Window_Nowe.g.cs
+C:\Users\programista\Desktop\KS\kartkowka_1512\kart_Listy\obj\Debug\net6.0-windows\Window_Nowe.baml

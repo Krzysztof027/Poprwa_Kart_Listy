@@ -26,7 +26,29 @@ namespace kart_Listy
 
         private void Click_Zamknij(object sender, RoutedEventArgs e)
         {
-
+            MessageBoxResult okno = MessageBox.Show("Czy napewno chcesz zamknąć to okno?","Zamykanie",
+            MessageBoxButton.YesNo, MessageBoxImage.Question);//zadaje pytanie czy zamknąć okno
+            if(okno==MessageBoxResult.Yes)//Jeśli tak, wtedy zamyka
+                {
+                    this.Close();
+                }
         }
+
+        
+        //Błyskawica-->We właściwościach (wywyołujemy tak tą metodę)
+        private void Click_Nowe_Niemodalne(object sender, RoutedEventArgs e)
+        {
+            var okno = new Window_Nowe();
+            okno.Show();
+           //Wyświetla okno niemodlane 
+        }
+
+        private void Click_Nowe_Modalne(object sender, RoutedEventArgs e)
+        {
+            //var->Rozpoznaj typ elememntu po pierwszym przypisaniu wartości
+            var okno = new Window_Nowe();
+            okno.ShowDialog();
+        }
+        //Błyskawica-->We właściwościach (wywyołujemy tak tą metodę) 
     }
 }
